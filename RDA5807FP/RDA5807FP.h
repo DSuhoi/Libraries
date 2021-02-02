@@ -122,8 +122,6 @@
  * or 4-11 => E when ABCD_E = 1
  */
 
-
-uint8_t fm_buf[9];  // Radio buffer
 ///////////////Function/////////////////////////////
 void I2C_write(void);       // Write bytes
 void FM_init(void);         // Initializations RDA5807

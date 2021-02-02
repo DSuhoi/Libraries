@@ -39,27 +39,27 @@ int main(void)
 
         switch((uint8_t)get_button()) {
         case 1:     // Настройка частоты радиоприёмника
-            ++frequency; 
+            ++frequency;
             if(frequency > 1080)
                 frequency = 870;
-            setFreq(frequency); 
-            break; 
-        case 2: 
-            --frequency; 
+            setFreq(frequency);
+            break;
+        case 2:
+            --frequency;
             if(frequency < 870)
                 frequency = 1080;
-            setFreq(frequency); 
+            setFreq(frequency);
             break;
         case 3: // Меню для настройка радиостанции
-            LCDclear(); 
-            menu(); 
-            break; 
+            LCDclear();
+            menu();
+            break;
         case 4: // Настройка звука
-            volume_mod(); 
-            break; 
+            volume_mod();
+            break;
         };
         // Расчёт частоты принимаемой волны
-        uint8_t f1 = frequency/1000;            
+        uint8_t f1 = frequency/1000;
         uint8_t f2 = frequency/100-f1*10;
         uint8_t f3 = frequency/10-f1*100-f2*10;
         uint8_t f4 = frequency-f1*1000-f2*100-f3*10;

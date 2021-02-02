@@ -21,7 +21,7 @@ HFUSES = 0xd1
 #рабочая частота МК
 FREQ = 8000000UL
 
-CFLAGS = -mmcu=$(MCU) -DF_CPU=$(FREQ) -Wall -Werror -Wextra -g -Os 
+CFLAGS = -mmcu=$(MCU) -DF_CPU=$(FREQ) -Wall -g -Os 
 PFLAGS = -c $(PROG) -p $(MCU_P)
 
 
